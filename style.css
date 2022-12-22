@@ -368,6 +368,48 @@ body{
     color: white;
 }
 
+/* VIDEO */
+
+.content-block-video{
+    width: 100%;
+    /* height: 150%; */
+    margin-top: 10vmin;
+    margin-left: 11vmin;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container-video{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-video h3{
+    font-size: 4vmin;
+    margin: 2vmin 0;
+}
+
+.container-video h3::first-letter{
+    color: red;
+}
+
+.video{
+    width: 70vmin;
+    margin: 2vmin 0;
+}
+
+.video p{
+    text-align: center;
+    font-size: 3vmin;
+}
+
+video{
+    width: 70vmin;
+}
+
 /* MOBILE */
 
 @media only screen and (max-width: 450px) {
