@@ -1,0 +1,399 @@
+@font-face {
+    font-family: 'Aucznik 1303 Plus';
+    src: url(15039.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content:  space-between;
+    background-color: black;
+    color: white;
+    font-family: 'Aucznik 1303 Plus';
+    overflow-x: hidden;
+}
+
+/* HEADER and FOOTER*/
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vmin;
+    display: flex;
+}
+
+.logo img{
+    height: 10vmin;
+}
+
+.name-gogs{
+    text-align: center;
+    font-size: 5vmin;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    background-color: black;
+    z-index: 99;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vmin;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black; 
+}
+
+.footer a{
+    color: red;
+    font-size: 2vmin;
+    transition: .5s;
+}
+
+.footer a:hover{
+    transform: scale(1.2);
+}
+
+/* CONTENT */
+
+.content{
+    width: 100%;
+    height: 80vmin;
+    display: flex;
+}
+
+.bar{
+    position: fixed;
+    width: 15vmin;
+    height: 80%;
+    margin-top: 10vmin;
+}
+
+.bar a{
+    color: red;
+    font-size: 2vmin;
+    margin: 30px 0;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bar a:hover{
+    transform: scale(1.2);
+}
+
+.content-block{
+    width: 100%;
+    /* width: 80vmin; */
+    height: 85%;
+    margin-top: 10vmin;
+    margin-left: 11vmin;
+    display: flex;
+    align-items: center;
+}
+
+.content-block-player{
+    width: 100%;
+    /* height: 150%; */
+    margin-top: 10vmin;
+    margin-left: 11vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+}
+
+.help-block-for-player{
+    width: 100%;
+    height: 20vmin;
+}
+
+.pavlov{
+    height: 30vmin;
+    margin: 30px;
+    margin-top: -150px;
+    font-size: 2.5vmin;
+}
+
+.pavlov div{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.pavlov p{
+    text-indent: 40px;
+}
+
+.pavlov span{
+    font-size: 2.5vmin;
+    font-style: italic;
+    padding: 40px 0 0 100px;
+    text-align: right;
+}
+
+.dog{
+    position: absolute;
+    bottom: 10vmin;
+    right: 30px;
+    width: 40vmin;
+}
+
+/* PLAYER pleer.html */
+
+.container-for-player{
+    margin-top: 10vmin;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:  flex-start;
+    flex-direction: column;
+}
+
+.albom-name{
+    width: 70%;
+    margin: 15px 0;
+    font-size: 4vmin;
+    font-weight: 700;
+    text-align: center;
+}
+
+.albom-name::first-letter{
+    color: red;
+}
+
+.img{
+    width: 25vmin;
+    border-radius: 50%;
+}
+
+.img.active{
+    animation: move 15s linear infinite;
+}
+
+.now-name-song{
+    font-size: 3.5vmin;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.now-name-song::first-letter{
+    color: red;
+}
+
+.name-song::first-letter{
+    color: red;
+}
+
+.block-progressbar{
+    width: 50%;
+    margin: 10px 0;
+   
+}
+
+.progressbar{
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.progress{
+    width: 0;
+    height: 4px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+.manage{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 3vmin;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.play-box{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.play{
+    font-size: 5vmin;
+}
+
+.play,
+.prev,
+.next{
+    cursor: pointer;
+}
+
+.volume-box{
+    width: 50%;
+    height: 4px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.volume-box span{
+    font-size: 3.5vmin;
+    margin: -10px 20px 0 0;
+    color: red;
+    cursor: pointer;
+
+}
+
+.volume{
+    position: relative;
+    width: 40%;
+    height: 4px;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.progress-volume{
+    width: 100%;
+    height: 4px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+.songs-collection{
+    width: 50%;
+    margin-top: 20px;
+}
+
+.song-block{
+    width: 100%;
+    height: 50px;
+    font-size: 2.5vmin;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+@keyframes move{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ALBUMS LIST main.html */
+
+.container-album{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+} 
+
+.container-album:nth-child(1){
+    margin-top: 10vmin;
+}
+
+.album{
+    width: 80vmin;
+    height: 70vmin;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.album:hover{
+    transform: scale(1.05);
+}
+
+.status-album{
+    font-size: 3.5vmin;
+    margin-bottom: 20px;
+}
+
+.status-album::first-letter{
+    color: red;
+}
+
+.postet-player{
+    width: 40vmin;
+    height: 40vmin;
+}
+
+.name-album{
+    font-size: 3.5vmin;
+    margin-top: 20px;
+}
+
+.name-album::first-letter{
+    color: red;
+}
+
+.a{
+    text-decoration: none;
+    color: white;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 450px) {
+    .pavlov{
+        margin-top: 30px;
+    }
+    .pavlov div{
+        width: 90%;
+    }
+    .pavlov span{
+        padding: 40px 0 0 10px;
+    }
+    .container-album{
+        justify-content: none;
+        flex-direction: column;
+    }
+    .album{
+        margin: 10px 0;
+    }
+    .content{
+        height: 100vmax;
+    }
+    .content-block{
+        align-items: flex-start;
+    }
+}
+
+
+
