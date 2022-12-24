@@ -497,6 +497,7 @@ video{
     }
     .songs-collection{
         margin-top: 10px;
+        overflow-y: hidden;
         overflow-x: scroll;
     }
     .song-block{
