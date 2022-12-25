@@ -416,6 +416,84 @@ video{
     width: 70vmin;
 }
 
+/* ACCORDEON FOR TEXTS */
+
+.container-for-texts{
+    width: 100%;
+    margin-top: 5vmin;
+    margin-left: 11vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+}
+
+.container-for-texts h2{
+    font-size: 4vmin;
+    text-align: center;
+}
+
+.container-for-texts h2::first-letter{
+    color: red;
+}
+
+.accord{
+    width: 50vmin;
+    position: relative;
+    display: flex;
+    flex: 0 1 100%;
+    flex-direction: column;
+}
+
+.faq-input{
+    width: 0;
+    height: 0;
+}
+
+.faq-title{
+    margin: 20px auto 5px auto;
+    display: block;
+    width: 90%;
+    padding: 1vmin 0 0 1vmin;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    font-size: 3vmin;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* .faq-title::after{
+    content: '\21D2';
+    position: absolute;
+    right: 7%;
+} */
+
+.faq-text{
+    display: none;
+    margin: 20px auto;
+    width: 90%;
+    padding: 10px 5px;
+    font-weight: 500;
+    font-size: 2.5vmin;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.faq-input:checked ~ .faq-text{
+    display: block;
+}
+
+/* .faq-input:checked ~ .faq-title{
+    color: #b75cd3;
+} */
+
+/* .faq-input:checked ~ .faq-title::after{
+    content: '\21D3';
+} */
+
 /* SCROLL */
 
 /* W3C standard
