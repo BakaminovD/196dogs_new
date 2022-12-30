@@ -49,6 +49,9 @@ body{
     background-color: black;
     z-index: 99;
 }
+.name-gogs h1{
+    font-size: 5vmin;
+}
 
 .footer{
     position: fixed;
@@ -104,7 +107,6 @@ body{
 
 .content-block{
     width: 100%;
-    /* width: 80vmin; */
     height: 85%;
     margin-top: 10vmin;
     margin-left: 11vmin;
@@ -114,7 +116,6 @@ body{
 
 .content-block-player{
     width: 100%;
-    /* height: 150%; */
     margin-top: 10vmin;
     margin-left: 11vmin;
     display: flex;
@@ -255,6 +256,11 @@ body{
     cursor: pointer;
 }
 
+.note svg{
+    fill: red;
+    width: 3vmin;
+}
+
 .volume-box{
     width: 50%;
     height: 4px;
@@ -377,7 +383,6 @@ body{
 
 .content-block-video{
     width: 100%;
-    /* height: 150%; */
     margin-top: 10vmin;
     margin-left: 11vmin;
     display: flex;
@@ -463,12 +468,6 @@ video{
     cursor: pointer;
 }
 
-/* .faq-title::after{
-    content: '\21D2';
-    position: absolute;
-    right: 7%;
-} */
-
 .faq-text{
     display: none;
     margin: 20px auto;
@@ -482,17 +481,13 @@ video{
     transition-duration: 0.5s;
 }
 
-.faq-input:checked ~ .faq-text{
+.faq-text-active{
     display: block;
 }
 
-/* .faq-input:checked ~ .faq-title{
-    color: #b75cd3;
-} */
-
-/* .faq-input:checked ~ .faq-title::after{
-    content: '\21D3';
-} */
+.faq-input:checked ~ .faq-text{
+    display: block;
+}
 
 /* SCROLL */
 
@@ -505,7 +500,7 @@ video{
   
   /* для Chrome/Edge/Safari */
   *::-webkit-scrollbar {
-    height: 8px; /* 12px */
+    height: 8px; 
     width: 8px;
   }
   *::-webkit-scrollbar-track {
@@ -588,7 +583,7 @@ video{
 
     /* для Chrome/Edge/Safari */
     *::-webkit-scrollbar {
-        height: 6px; /* 12px */
+        height: 6px;
         width: 6px;
     }
     *::-webkit-scrollbar-thumb {

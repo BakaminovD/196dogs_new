@@ -10,7 +10,7 @@ const player = document.querySelector('.container-for-player'),
     songCollection = document.querySelector('.songs-collection'),
     progressVolume = document.querySelector('.progress-volume'),
     poligonVolume = document.querySelector('.volume'),
-    note = document.querySelector('.note');
+    note = document.querySelector('.note svg');
 let songBlock = document.getElementsByClassName('song-block'),
     containAlbum = document.querySelector('.container-album'),
     containForPlayer = document.querySelector('.container-for-player')
@@ -150,13 +150,13 @@ function myVolume() {
         audio.volume = 0;
         volumeFlag = false
         progressVolume.style.width = 0 +"%"
-        note.style.color = "white"
+        note.style.fill = "white"
         nowVolume = 0
     } else {
         audio.volume = 1;
         volumeFlag = true
         progressVolume.style.width = 100 +"%"
-        note.style.color = "red"
+        note.style.fill = "red"
         nowVolume = 1
     }
 }
@@ -171,11 +171,11 @@ function updateVolume(e) {
         audio.volume = 0;
         volumeFlag = false
         progressVolume.style.width = 0 +"%"
-        note.style.color = "white"
+        note.style.fill = "white"
         nowVolume = 0
     } else {
         audio.volume = nowVolume
-        note.style.color = "red"
+        note.style.fill = "red"
     }
 }
 
